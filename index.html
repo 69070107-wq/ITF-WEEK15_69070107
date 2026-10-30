@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 15 | สุ่มเมนูอาหารไทย</title>
+  <!-- Favinline favicon กัน error 404 -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍜</text></svg>">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">🍜 ร้านอาหารไทย Week 15</div>
+      <ul class="nav-menu">
+        <li><a href="#" class="nav-link">หน้าแรก</a></li>
+        <li><a href="#" class="nav-link">เมนูทั้งหมด</a></li>
+        <li><a href="#" class="nav-link">เกี่ยวกับเรา</a></li>
+      </ul>
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <header class="page-header">
+      <h1>อะไรดีวันนี้?</h1>
+      <p>กดปุ่มสุ่มเพื่อเลือกเมนูอาหารไทยแบบสุ่ม</p>
+    </header>
+
+    <!-- Food Card -->
+    <section class="food-section">
+      <div class="food-card" id="foodCard">
+        <div class="food-image-wrapper">
+          <div class="image-placeholder" id="imagePlaceholder">กำลังโหลดรูปภาพ...</div>
+          <img id="foodImage" src="" alt="รูปภาพเมนูอาหาร" class="food-image" loading="eager" fetchpriority="high">
+          <span class="food-tag" id="foodTag">เมนูแนะนำ</span>
+        </div>
+        <div class="food-content">
+          <h2 id="foodName">กำลังโหลด...</h2>
+          <p id="foodDesc">คำอธิบายเมนูจะแสดงที่นี่เมื่อสุ่มเมนูแล้ว</p>
+          <div class="price-box">
+            <span class="price-label">ราคา:</span>
+            <span id="foodPrice" class="price-value">- บาท</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Randomize Button -->
+    <div class="btn-wrapper">
+      <button id="randomizeBtn" class="btn-randomize">
+        <span class="btn-icon">🎲</span>
+        <span class="btn-text">สุ่มเมนูอาหาร</span>
+      </button>
+    </div>
+
+    <!-- All Menu List -->
+    <section class="all-menu-section" id="allMenuSection">
+      <h2 class="section-title">เมนูอาหารทั้งหมด</h2>
+      <div class="menu-grid" id="menuGrid"></div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>&copy; 2026 Week 15 - Thai Food Randomizer. สร้างขึ้นเพื่อการศึกษา</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
